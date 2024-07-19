@@ -42,9 +42,7 @@ def predict():
         predict = json.loads(response["prediction"])
         label = np.argmax(predict)
 
-        # st.write(prediction)
-        # st.write(label)
-        st.markdown("#### Prediction - blue:[{class_labels[label]}]")
+        st.markdown(f"#### Prediction - {class_labels[label]}")
 
 st.button(
     label="Predict",
